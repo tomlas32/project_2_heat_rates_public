@@ -1,0 +1,32 @@
+Automated Temperature Data Analysis README
+Overview
+This project consists of two main scripts designed to automate the analysis of temperature data collected over time. The aim is to identify plateaus in the data and calculate key statistics (minimum, maximum, and average temperatures) during these plateaus. Additionally, the scripts can calculate heating and cooling rates between specified temperature ranges and generate plots of the data.
+
+Scripts
+main_analysis.py
+main_analysis.py is the primary script responsible for analyzing the temperature data stored in .txt files. It reads the data, processes it to identify relevant features, and outputs the desired analysis.
+
+analysis_functions.py
+analysis_functions.py contains function definitions that are called by the main script (main_analysis.py). These functions perform various tasks such as identifying plateaus, calculating statistics, and generating plots.
+
+Project Objectives
+Automated Plateau Detection: 
+Identify the range in the data where a plateau occurs. The user can define the acceptable variation in plateau values.
+Statistics Calculation: Calculate the minimum, maximum, and average temperatures recorded during the plateau.
+Plot Generation: If specified by the user, generate a plot of the data with the plateau highlighted in red.
+Heating and Cooling Rates: Calculate the heating and cooling rates between 95°C and 40°C for each file.
+Batch Processing: Process all .txt files in a directory that meet the criteria of having a single heating ramp phase followed by a plateau and a cooling phase.
+
+Usage
+Prerequisites
+Python 3.x
+Required Python libraries (e.g., numpy, matplotlib, pandas). Ensure they are installed using
+
+Output
+The script outputs the following for each .txt file:
+
+Statistics: Minimum, maximum, and average temperatures during the plateau.
+Heating and Cooling Rates: Calculated between 95°C and 40°C.
+Plot: (Optional) Plot of the temperature data with the plateau highlighted.
+
+Relevant data will be stored in a csv file upon completion of the script
